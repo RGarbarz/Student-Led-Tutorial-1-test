@@ -118,6 +118,10 @@ bowtie2 --very-fast-local -p 16 -x human_bowtie_reference -1 CRC_1.fastq -2 CRC_
 # Process the SAM file using SAMtools
 We now need to convert our .sam files to .bam files so that they can be used by the IGV software.
 
+``` bash
+module load samtools
+``` 
+
 1. Convert to BAM:
 ``` bash
 samtools view -Sb NC.sam > NC.bam
